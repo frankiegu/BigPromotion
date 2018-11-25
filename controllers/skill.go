@@ -52,7 +52,7 @@ func (p *SkillController) SecKill() {
 		}
 
 		secRequest.ClientReference = p.Ctx.Request.Referer()
-		secRequest.CloseNotify = p.Ctx.ResponseWriter.CloseNotify()
+		//secRequest.CloseNotify = p.Ctx.ResponseWriter.CloseNotify()
 
 		logs.Debug("client request:[%v]", secRequest)
 		if err != nil {

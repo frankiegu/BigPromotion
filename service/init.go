@@ -7,42 +7,7 @@ import (
 	"github.com/beego/logs"
 )
 
-var (
-	secKillConf *SecKillConf
-)
 
-
-func InitService(serviceConf *SecKillConf)(err error) {
-	secKillConf = serviceConf
-	//init blacklist
-	err = loadBlackList()
-	if err != nil {
-		logs.Error("load black list err:%v", err)
-		return
-	}
-	logs.Debug("init service succ, config:%v", secKillConf)
-
-	err = initProxy2LayerRedis()
-	if err != nil {
-		logs.Error("load proxy2layer redis pool failed, err:%v", err)
-		return
-	}
-
-	secKillConf.secReqChan = make(chan *SecRequst, 1000)
-	secKillConf.UserConnMap = make(map[string]chan *SecResult, 10000)
-
-
-
-	initRedisProcessFunc()
-	if err != nil {
-		logs.Error("load initRedisProcessFunc failed, err:%v", err)
-		return
-	}
-
-
-	return
-
-}
 
 func initRedisProcessFunc()(err error) {
 	for i:=0; i< secKillConf.WriteProxy2LayerGoroutineNume; i++ {

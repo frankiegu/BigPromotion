@@ -278,6 +278,15 @@ func initRedis() (err error) {
 		},
 	}
 
+	//redisPool = &redis.Pool{
+	//	MaxIdle:64,
+	//	MaxActive:0,
+	//	IdleTimeout:300,
+	//	Dial: func() (redis.Conn, error) {
+	//		return redis.Dial("tcp", "127.0.0.1")
+	//	},
+	//}
+
 	conn := redisPool.Get()
 	defer conn.Close()
 
@@ -286,5 +295,5 @@ func initRedis() (err error) {
 		logs.Error("ping redis failed, err:%v", err)
 	}
 
-	return nil
+	return
 }

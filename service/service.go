@@ -16,11 +16,50 @@ const (
 	ProductStatusForceSaleOut = 2
 )
 
+var (
+	secKillConf *SecKillConf
+)
+
+
+func InitService(serviceConf *SecKillConf)(err error) {
+	secKillConf = serviceConf
+	//init blacklist
+	err = loadBlackList()
+	if err != nil {
+		logs.Error("load black list err:%v", err)
+		return
+	}
+	logs.Debug("init service succ, config:%v", secKillConf)
+
+	err = initProxy2LayerRedis()
+	if err != nil {
+		logs.Error("load proxy2layer redis pool failed, err:%v", err)
+		return
+	}
+
+	secKillConf.secReqChan = make(chan *SecRequst, 10000)
+	//secKillConf.UserConnMap = make(map[string]chan *SecResult, 10000)
+	secKillConf.UserConnMap = make(map[string]SecResult, 10000)
+
+
+
+	initRedisProcessFunc()
+	if err != nil {
+		logs.Error("load initRedisProcessFunc failed, err:%v", err)
+		return
+	}
+
+
+	return
+
+}
+
 func NewSecRequst()(secRequst *SecRequst) {
 	//create an object
 	secRequst = &SecRequst{
-		ResultChan: make(chan *SecResult, 1),
+		//ResultChan : make(chan *SecResult, 1),
 	}
+
 	return
 }
 
@@ -179,20 +218,41 @@ func SecKill(req *SecRequst)(data map[string]interface{}, code int, err error) {
 
 	userKey := fmt.Sprintf("%s_%s", req.UserId, req.ProductId)
 
-	secKillConf.UserConnMap[userKey] = req.ResultChan
+	req.ResultChan.ProductId = req.ProductId
+	req.ResultChan.UserId = req.UserId
+	req.ResultChan.Token = "Temporary token"
 
+	secKillConf.UserConnMap[userKey] = req.ResultChan
+	println("secKillConf.UserConnMap put data")
+	for k, v := range secKillConf.UserConnMap {
+		println("k: ", k)
+		println("v:")
+		println("usrid: ", v.UserId)
+		println("productid: ", v.ProductId)
+		println("code: ", v.Code)
+		println("token: ", v.Token)
+	}
 	//write to redis
 	secKillConf.secReqChan <- req
+
 
 	//wait 10s
 	ticker := time.NewTicker(time.Second * 2)
 
 	defer func() {
 		ticker.Stop()
-		secKillConf.UserConnMapLock.Lock()
-		delete(secKillConf.UserConnMap,  userKey)
-		secKillConf.UserConnMapLock.Unlock()
+		//secKillConf.UserConnMapLock.Lock()
+		//delete(secKillConf.UserConnMap,  userKey)
+		//secKillConf.UserConnMapLock.Unlock()
 	}()
+
+	result := req.ResultChan
+	code = result.Code
+	data["product_id"] = result.ProductId
+	data["token"] = result.Token
+	data["user_id"] = result.UserId
+	println(req.ResultChan.Token)
+	return
 
 	select {
 
@@ -200,17 +260,17 @@ func SecKill(req *SecRequst)(data map[string]interface{}, code int, err error) {
 			code = ErrProcessTimeout
 			err = fmt.Errorf("request timeout")
 			return
-		case <- req.CloseNotify:
-			code = ErrClientClosed
-			err = fmt.Errorf("client already closed")
-			return
-		case result := <-req.ResultChan:
-			println("wocao........")
-			code = result.Code
-			data["product_id"] = result.ProductId
-			data["token"] = result.Token
-			data["user_id"] = result.UserId
-			return
+		//case <- req.CloseNotify:
+		//	code = ErrClientClosed
+		//	err = fmt.Errorf("client already closed")
+		//	return
+		//case result := <-req.ResultChan:
+		//	println("wocao........")
+		//	code = result.Code
+		//	data["product_id"] = result.ProductId
+		//	data["token"] = result.Token
+		//	data["user_id"] = result.UserId
+		//	return
 
 	}
 	return

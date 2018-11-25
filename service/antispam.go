@@ -31,7 +31,7 @@ func antiSpam(req *SecRequst)(err error) {
 
 	count := seckLimit.Count(req.AccessTime.Unix())
 
-	// cur user can not request num can not more than 2
+	// cur user can not request num can not more than 5 per second
 	if count > secKillConf.UserSecAccessLimit {
 		err = fmt.Errorf("invalid request, because request too busy")
 		return
@@ -47,8 +47,6 @@ func antiSpam(req *SecRequst)(err error) {
 	if ipcount > secKillConf.IpSecAccessLimit {
 		err = fmt.Errorf("invalid request, because request ip too busy")
 	}
-
-
 
 	return
 }
