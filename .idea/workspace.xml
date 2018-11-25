@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="921512b0-2303-471e-b089-157005cc6d31" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/skill.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/skill.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/init.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/sec.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject" beforeDir="false" afterPath="$PROJECT_DIR$/myproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/redis_proc.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/redis_proc.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/service.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,14 +45,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="conf" value="667" />
-          <entry key="go" value="30376" />
+          <entry key="go" value="30467" />
           <entry key="md" value="5" />
           <entry key="tpl" value="429" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="30376" />
+          <entry key="Go" value="30467" />
           <entry key="PLAIN_TEXT" value="994" />
           <entry key="XHTML" value="107" />
         </counts>
@@ -67,6 +60,7 @@
       <usages-collector id="statistics.go.postfix.template.usages.trigger">
         <counts>
           <entry key=".append" value="1" />
+          <entry key=".close" value="1" />
           <entry key=".complex" value="1" />
           <entry key=".len" value="1" />
           <entry key=".println" value="7" />
@@ -97,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/service/service.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+            <state relative-caret-position="464">
+              <caret line="278" column="4" lean-forward="true" selection-start-line="278" selection-start-column="4" selection-end-line="278" selection-end-column="4" />
               <folding>
                 <element signature="e#17#81#0" expanded="true" />
               </folding>
@@ -151,11 +145,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/redis_proc.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="100" column="41" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
+            <state relative-caret-position="166">
+              <caret line="97" selection-start-line="97" selection-end-line="97" />
             </state>
           </provider>
         </entry>
@@ -180,7 +174,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>secinfobyid</find>
       <find>SecInfoById</find>
       <find>antisp</find>
       <find>RedisBlackConf</find>
@@ -210,6 +203,7 @@
       <find>userKey</find>
       <find>secKillConf</find>
       <find>businessResponse</find>
+      <find>close</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/lib/go-1.9" />
@@ -261,8 +255,8 @@
         <option value="$PROJECT_DIR$/service/antispam.go" />
         <option value="$PROJECT_DIR$/init.go" />
         <option value="$PROJECT_DIR$/controllers/skill.go" />
-        <option value="$PROJECT_DIR$/service/service.go" />
         <option value="$PROJECT_DIR$/service/redis_proc.go" />
+        <option value="$PROJECT_DIR$/service/service.go" />
       </list>
     </option>
   </component>
@@ -443,8 +437,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="-3" width="983" height="653" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2166141" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2166141" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -456,8 +451,8 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947423" weight="0.3297491" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.48790747" visible="true" weight="0.32795697" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51209253" side_tool="true" visible="true" weight="0.32795697" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.48790747" visible="true" weight="0.31362006" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51209253" side_tool="true" visible="true" weight="0.31362006" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -872,20 +867,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/service.go">
+    <entry file="file://$PROJECT_DIR$/service/redis_proc.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding>
-            <element signature="e#17#81#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="166">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/redis_proc.go">
+    <entry file="file://$PROJECT_DIR$/service/service.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="100" column="41" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
+        <state relative-caret-position="464">
+          <caret line="278" column="4" lean-forward="true" selection-start-line="278" selection-start-column="4" selection-end-line="278" selection-end-column="4" />
+          <folding>
+            <element signature="e#17#81#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
