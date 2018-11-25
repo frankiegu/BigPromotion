@@ -69,6 +69,7 @@ func ReadHandle() {
 			continue
 		}
 
+
 		println("secKillConf.UserConnMap get data")
 		for k, v := range secKillConf.UserConnMap {
 			println("k: ", k)
@@ -82,15 +83,26 @@ func ReadHandle() {
 		userKey := fmt.Sprintf("%s_%s", result.UserId, result.ProductId)
 		println("userKey: ", userKey)
 		secKillConf.UserConnMapLock.Lock()
-		resultChan := secKillConf.UserConnMap[userKey]
-		fmt.Println(resultChan)
+		BasicInfo := secKillConf.UserConnMap[userKey]
+		fmt.Println(BasicInfo)
+
+		//simulate fill business data
+		buzData := &SecResponse{}
+		buzData.Token = BasicInfo.Token
+		buzData.Code = BasicInfo.Code
+		buzData.ProductId = BasicInfo.ProductId
+		buzData.UserId = BasicInfo.UserId
+		buzData.TokenTime = 1234
+
+		businessResponse <- buzData
+
 		//simulate get code
-		resultChan.Code = 0
+		BasicInfo.Code = 0
 		secKillConf.UserConnMapLock.Unlock()
 
 
-		//resultChan <- &result
-		resultChan = result
+		//BasicInfo <- &result
+		BasicInfo = result
 		conn.Close()
 
 

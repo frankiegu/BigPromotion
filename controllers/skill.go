@@ -19,6 +19,7 @@ func (p *SkillController) SecKill() {
 	result := make(map[string]interface{})
 	result["code"] = 0
 	result["message"] = "success"
+
 	defer func() {
 		p.Data["json"] = result
 		p.ServeJSON()
@@ -46,6 +47,12 @@ func (p *SkillController) SecKill() {
 		secRequest.UserId, _ = p.GetInt("user_id")
 		secRequest.UserAuthSign = p.Ctx.GetCookie("userAuthSign")
 		secRequest.AccessTime = time.Now()
+
+		//userKey := fmt.Sprintf("%s_%s", secRequest.UserId, secRequest.ProductId)
+
+
+
+
 		//10.108.42.200:39098 p.Ctx.Request.RemoteAddr
 		if len(p.Ctx.Request.RemoteAddr) > 0 {
 			secRequest.ClientAddr = strings.Split(p.Ctx.Request.RemoteAddr, ":")[0]
@@ -55,6 +62,9 @@ func (p *SkillController) SecKill() {
 		//secRequest.CloseNotify = p.Ctx.ResponseWriter.CloseNotify()
 
 		logs.Debug("client request:[%v]", secRequest)
+
+
+
 		if err != nil {
 			result["code"] = service.ErrInvalidRequest
 			result["message"] = fmt.Sprintf("invalid cookie:userId")
@@ -62,6 +72,9 @@ func (p *SkillController) SecKill() {
 		}
 
 		data, code, err := service.SecKill(secRequest)
+
+
+
 
 		if err != nil {
 			result["code"] = code

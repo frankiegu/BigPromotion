@@ -1,270 +1,151 @@
-2018/11/24 23:17:59.344 [I]  init logger success
-2018/11/24 23:17:59.344 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/24 23:17:59.345 [I]  init etcd success
-2018/11/24 23:17:59.345 [I]  init redis success
-2018/11/24 23:17:59.348 [I]  init sec success
-2018/11/24 23:17:59.348 [I]  initSecProductWatcher begin
-2018/11/24 23:17:59.349 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc420082b10 1082:0xc420082ae0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4202419d0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/24 23:17:59.350 [I]  initSec succ
-2018/11/24 23:17:59.356 [D]  begin function watchSecProductKey
-2018/11/24 23:18:02.150 [D]  client request:[&{1082     0 2018-11-24 23:18:02.15062489 +0800 CST m=+2.815874142  127.0.0.1  0xc42a955800}]
-2018/11/24 23:18:02.152 [E]  json.Marshal failed, error:json: unsupported type: chan *service.SecResult, req:&{1082     0 2018-11-24 23:18:02.15062489 +0800 CST m=+2.815874142  127.0.0.1  0xc42a955800}
-2018/11/25 00:01:57.114 [I]  init logger success
-2018/11/25 00:01:57.115 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 00:01:57.115 [I]  init etcd success
-2018/11/25 00:01:57.115 [I]  init redis success
-2018/11/25 00:01:57.118 [I]  init sec success
-2018/11/25 00:01:57.118 [I]  initSecProductWatcher begin
-2018/11/25 00:01:57.123 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc4202c4090 1082:0xc4202c4060] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4202ae150 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 00:01:57.124 [I]  initSec succ
-2018/11/25 00:01:57.128 [D]  begin function watchSecProductKey
-2018/11/25 00:01:59.657 [D]  client request:[&{1082     0 2018-11-25 00:01:59.6573498 +0800 CST m=+2.561147021  127.0.0.1  0xc429f9b860}]
-2018/11/25 00:01:59.658 [E]  json.Marshal failed, error:json: unsupported type: chan *service.SecResult, req:&{1082     0 2018-11-25 00:01:59.6573498 +0800 CST m=+2.561147021  127.0.0.1  0xc429f9b860}
-2018/11/25 11:24:47.498 [I]  init logger success
-2018/11/25 11:24:47.498 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 11:24:47.498 [I]  init etcd success
-2018/11/25 11:24:47.500 [I]  init redis success
-2018/11/25 11:24:47.501 [I]  init sec success
-2018/11/25 11:24:47.501 [I]  initSecProductWatcher begin
-2018/11/25 11:24:47.503 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc4202f20c0 1082:0xc4202f2090] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4202ca150 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 11:24:47.506 [I]  initSec succ
-2018/11/25 11:24:47.508 [D]  begin function watchSecProductKey
-2018/11/25 11:24:50.214 [D]  client request:[&{1082     0 2018-11-25 11:24:50.214018013 +0800 CST m=+2.722406156  127.0.0.1  0xc42b63aea0}]
-2018/11/25 11:24:50.215 [E]  json.Marshal failed, error:json: unsupported type: chan *service.SecResult, req:&{1082     0 2018-11-25 11:24:50.214018013 +0800 CST m=+2.722406156  127.0.0.1  0xc42b63aea0}
-2018/11/25 11:47:26.280 [I]  init logger success
-2018/11/25 11:47:26.280 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 11:47:26.280 [I]  init etcd success
-2018/11/25 11:47:26.281 [I]  init redis success
-2018/11/25 11:47:26.283 [I]  init sec success
-2018/11/25 11:47:26.283 [I]  initSecProductWatcher begin
-2018/11/25 11:47:26.284 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc42023a1b0 1082:0xc42023a180] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4202ac2a0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 11:47:26.285 [I]  initSec succ
-2018/11/25 11:47:26.288 [D]  begin function watchSecProductKey
-2018/11/25 11:47:28.491 [D]  client request:[&{1082     0 2018-11-25 11:47:28.491838691 +0800 CST m=+2.223201604  127.0.0.1  0xc429462d80}]
-2018/11/25 11:47:28.494 [E]  json.Marshal failed, error:json: unsupported type: chan *service.SecResult, req:&{1082     0 2018-11-25 11:47:28.491838691 +0800 CST m=+2.223201604  127.0.0.1  0xc429462d80}
-2018/11/25 12:01:53.851 [I]  init logger success
-2018/11/25 12:01:53.851 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:01:53.851 [I]  init etcd success
-2018/11/25 12:01:53.851 [I]  init redis success
-2018/11/25 12:01:53.854 [I]  init sec success
-2018/11/25 12:01:53.854 [I]  initSecProductWatcher begin
-2018/11/25 12:01:53.856 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc42001ca50 1082:0xc42001ca20] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc42012d9d0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:01:53.861 [I]  initSec succ
-2018/11/25 12:01:53.865 [D]  begin function watchSecProductKey
-2018/11/25 12:02:03.174 [D]  client request:[&{1082     0 2018-11-25 12:02:03.174492276 +0800 CST m=+9.340006434  127.0.0.1  0xc44a651e00}]
-2018/11/25 12:02:03.175 [E]  json.Marshal failed, error:json: unsupported type: chan *service.SecResult, req:&{1082     0 2018-11-25 12:02:03.174492276 +0800 CST m=+9.340006434  127.0.0.1  0xc44a651e00}
-2018/11/25 12:23:59.269 [I]  init logger success
-2018/11/25 12:23:59.269 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:23:59.269 [I]  init etcd success
-2018/11/25 12:23:59.269 [I]  init redis success
-2018/11/25 12:23:59.272 [I]  init sec success
-2018/11/25 12:23:59.273 [I]  initSecProductWatcher begin
-2018/11/25 12:23:59.274 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc4203020c0 1082:0xc420302090] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4202e6150 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:23:59.275 [I]  initSec succ
-2018/11/25 12:23:59.278 [D]  begin function watchSecProductKey
-2018/11/25 12:24:02.212 [D]  client request:[&{1082     0 2018-11-25 12:24:02.212370948 +0800 CST m=+2.959331551  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:24:02.213 [W]  lPUSH failed, error:ERR max number of clients reached
-2018/11/25 12:25:56.197 [I]  init logger success
-2018/11/25 12:25:56.197 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:25:56.197 [I]  init etcd success
-2018/11/25 12:25:56.198 [I]  init redis success
-2018/11/25 12:25:56.200 [I]  init sec success
-2018/11/25 12:25:56.200 [I]  initSecProductWatcher begin
-2018/11/25 12:25:56.201 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc420080900 1082:0xc4200808d0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc420151960 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:25:56.202 [I]  initSec succ
-2018/11/25 12:25:56.204 [D]  begin function watchSecProductKey
-2018/11/25 12:25:57.892 [D]  client request:[&{1082     0 2018-11-25 12:25:57.892669885 +0800 CST m=+1.706624761  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:25:57.894 [W]  lPUSH failed, error:ERR max number of clients reached
-2018/11/25 12:28:38.893 [I]  init logger success
-2018/11/25 12:28:38.893 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:28:38.893 [I]  init etcd success
-2018/11/25 12:28:38.894 [I]  init redis success
-2018/11/25 12:28:38.896 [I]  init sec success
-2018/11/25 12:28:38.896 [I]  initSecProductWatcher begin
-2018/11/25 12:28:38.897 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1082:0xc42001c600 1092:0xc42001c630] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc42013b570 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:28:38.898 [I]  initSec succ
-2018/11/25 12:28:38.900 [D]  begin function watchSecProductKey
-2018/11/25 12:28:40.442 [D]  client request:[&{1082     0 2018-11-25 12:28:40.442106843 +0800 CST m=+1.558488643  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:30:36.759 [I]  init logger success
-2018/11/25 12:30:36.759 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:30:36.759 [I]  init etcd success
-2018/11/25 12:30:36.759 [I]  init redis success
-2018/11/25 12:30:36.762 [I]  init sec success
-2018/11/25 12:30:36.762 [I]  initSecProductWatcher begin
-2018/11/25 12:30:36.762 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1082:0xc42001cb40 1092:0xc42001cb70] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4202619d0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:30:36.763 [I]  initSec succ
-2018/11/25 12:30:36.765 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T12:28:40.442106843+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":0,"UserId":0,"Code":0,"Token":""}}
-2018/11/25 12:30:36.764 [D]  begin function watchSecProductKey
-2018/11/25 12:30:40.642 [D]  client request:[&{1082     0 2018-11-25 12:30:40.641940204 +0800 CST m=+3.894911605  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:30:40.771 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T12:30:40.641940204+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":0,"UserId":0,"Code":0,"Token":""}}
-2018/11/25 12:32:44.209 [I]  init logger success
-2018/11/25 12:32:44.209 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:32:44.209 [I]  init etcd success
-2018/11/25 12:32:44.211 [I]  init redis success
-2018/11/25 12:32:44.212 [I]  init sec success
-2018/11/25 12:32:44.212 [I]  initSecProductWatcher begin
-2018/11/25 12:32:44.215 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc42001c9f0 1082:0xc42001c9c0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc42012d8f0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:32:44.225 [I]  initSec succ
-2018/11/25 12:32:44.228 [D]  begin function watchSecProductKey
-2018/11/25 12:32:47.930 [D]  client request:[&{1082     0 2018-11-25 12:32:47.930601949 +0800 CST m=+3.732344521  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:32:48.250 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T12:32:47.930601949+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":0,"UserId":0,"Code":0,"Token":""}}
-2018/11/25 12:35:55.457 [I]  init logger success
-2018/11/25 12:35:55.457 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:35:55.457 [I]  init etcd success
-2018/11/25 12:35:55.458 [I]  init redis success
-2018/11/25 12:35:55.460 [I]  init sec success
-2018/11/25 12:35:55.461 [I]  initSecProductWatcher begin
-2018/11/25 12:35:55.462 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc4202540c0 1082:0xc420254090] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc42028a1c0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:35:55.464 [I]  initSec succ
-2018/11/25 12:35:55.468 [D]  begin function watchSecProductKey
-2018/11/25 12:35:58.494 [D]  client request:[&{1082     0 2018-11-25 12:35:58.494651736 +0800 CST m=+3.052493883  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:35:58.502 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T12:35:58.494651736+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":0,"UserId":0,"Code":0,"Token":""}}
-2018/11/25 12:36:30.576 [I]  init logger success
-2018/11/25 12:36:30.576 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:36:30.576 [I]  init etcd success
-2018/11/25 12:36:30.577 [I]  init redis success
-2018/11/25 12:36:30.579 [I]  init sec success
-2018/11/25 12:36:30.579 [I]  initSecProductWatcher begin
-2018/11/25 12:36:30.580 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc420304090 1082:0xc420304060] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4202f0150 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:36:30.583 [I]  initSec succ
-2018/11/25 12:36:30.583 [D]  begin function watchSecProductKey
-2018/11/25 12:36:32.100 [D]  client request:[&{1082     0 2018-11-25 12:36:32.100117171 +0800 CST m=+1.541772657  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:36:32.590 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T12:36:32.100117171+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":0,"UserId":0,"Code":0,"Token":""}}
-2018/11/25 12:42:22.051 [I]  init logger success
-2018/11/25 12:42:22.051 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:42:22.051 [I]  init etcd success
-2018/11/25 12:42:22.052 [I]  init redis success
-2018/11/25 12:42:22.054 [I]  init sec success
-2018/11/25 12:42:22.054 [I]  initSecProductWatcher begin
-2018/11/25 12:42:22.054 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1082:0xc4202ca0f0 1092:0xc4202ca120] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4202502a0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:42:22.056 [I]  initSec succ
-2018/11/25 12:42:22.057 [D]  begin function watchSecProductKey
-2018/11/25 12:42:23.904 [D]  client request:[&{1082     0 2018-11-25 12:42:23.904189277 +0800 CST m=+1.860201490  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:42:24.062 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T12:42:23.904189277+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":0,"UserId":0,"Code":0,"Token":""}}
-2018/11/25 12:42:57.490 [I]  init logger success
-2018/11/25 12:42:57.490 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:42:57.490 [I]  init etcd success
-2018/11/25 12:42:57.490 [I]  init redis success
-2018/11/25 12:42:57.492 [I]  init sec success
-2018/11/25 12:42:57.492 [I]  initSecProductWatcher begin
-2018/11/25 12:42:57.493 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1082:0xc42027e570 1092:0xc42027e5a0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc420282690 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:42:57.494 [I]  initSec succ
-2018/11/25 12:42:57.495 [D]  begin function watchSecProductKey
-2018/11/25 12:42:59.541 [D]  client request:[&{1082     0 2018-11-25 12:42:59.541432377 +0800 CST m=+2.062428470  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:43:00.496 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T12:42:59.541432377+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":0,"UserId":0,"Code":0,"Token":""}}
-2018/11/25 12:48:05.742 [I]  init logger success
-2018/11/25 12:48:05.742 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:48:05.742 [I]  init etcd success
-2018/11/25 12:48:05.742 [I]  init redis success
-2018/11/25 12:48:05.743 [I]  init sec success
-2018/11/25 12:48:05.743 [I]  initSecProductWatcher begin
-2018/11/25 12:48:05.744 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc42001c1b0 1082:0xc42001c180] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4202ac150 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:48:05.745 [I]  initSec succ
-2018/11/25 12:48:05.748 [D]  begin function watchSecProductKey
-2018/11/25 12:48:09.862 [D]  client request:[&{1082     0 2018-11-25 12:48:09.862630898 +0800 CST m=+4.130175845  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:48:10.767 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T12:48:09.862630898+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":0,"UserId":0,"Code":0,"Token":""}}
-2018/11/25 12:50:09.947 [I]  init logger success
-2018/11/25 12:50:09.947 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:50:09.947 [I]  init etcd success
-2018/11/25 12:50:09.948 [I]  init redis success
-2018/11/25 12:50:09.949 [I]  init sec success
-2018/11/25 12:50:09.949 [I]  initSecProductWatcher begin
-2018/11/25 12:50:09.950 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc4200829c0 1082:0xc420082990] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc420159a40 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:50:09.951 [I]  initSec succ
-2018/11/25 12:50:09.952 [D]  begin function watchSecProductKey
-2018/11/25 12:50:21.067 [D]  client request:[&{1082     0 2018-11-25 12:50:21.067302858 +0800 CST m=+11.132309343  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:50:21.967 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T12:50:21.067302858+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":0,"UserId":0,"Code":0,"Token":""}}
-2018/11/25 12:54:21.987 [I]  init logger success
-2018/11/25 12:54:21.987 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:54:21.987 [I]  init etcd success
-2018/11/25 12:54:21.988 [I]  init redis success
-2018/11/25 12:54:21.990 [I]  init sec success
-2018/11/25 12:54:21.990 [I]  initSecProductWatcher begin
-2018/11/25 12:54:21.992 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1082:0xc42001c150 1092:0xc42001c180] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4202b4150 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:54:21.993 [I]  initSec succ
-2018/11/25 12:54:22.005 [D]  begin function watchSecProductKey
-2018/11/25 12:54:25.017 [D]  client request:[&{1082     0 2018-11-25 12:54:25.017924436 +0800 CST m=+3.043975138  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:54:26.001 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T12:54:25.017924436+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":0,"UserId":0,"Code":0,"Token":"Temporary token"}}
-2018/11/25 12:55:44.236 [I]  init logger success
-2018/11/25 12:55:44.236 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:55:44.237 [I]  init etcd success
-2018/11/25 12:55:44.237 [I]  init redis success
-2018/11/25 12:55:44.238 [I]  init sec success
-2018/11/25 12:55:44.238 [I]  initSecProductWatcher begin
-2018/11/25 12:55:44.239 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc4202be510 1082:0xc4202be4e0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc420292620 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:55:44.241 [I]  initSec succ
-2018/11/25 12:55:44.241 [D]  begin function watchSecProductKey
-2018/11/25 12:55:45.846 [D]  client request:[&{1082     0 2018-11-25 12:55:45.845996579 +0800 CST m=+1.620546266  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:55:46.251 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T12:55:45.845996579+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":0,"UserId":0,"Code":0,"Token":"Temporary token"}}
-2018/11/25 12:56:47.741 [I]  init logger success
-2018/11/25 12:56:47.741 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:56:47.741 [I]  init etcd success
-2018/11/25 12:56:47.742 [I]  init redis success
-2018/11/25 12:56:47.744 [I]  init sec success
-2018/11/25 12:56:47.745 [I]  initSecProductWatcher begin
-2018/11/25 12:56:47.745 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc420082900 1082:0xc4200828d0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4201518f0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:56:47.750 [I]  initSec succ
-2018/11/25 12:56:47.751 [D]  begin function watchSecProductKey
-2018/11/25 12:56:49.553 [D]  client request:[&{1082     0 2018-11-25 12:56:49.553201007 +0800 CST m=+1.821393178  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:56:49.757 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T12:56:49.553201007+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
-2018/11/25 12:58:04.408 [I]  init logger success
-2018/11/25 12:58:04.408 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 12:58:04.408 [I]  init etcd success
-2018/11/25 12:58:04.410 [I]  init redis success
-2018/11/25 12:58:04.415 [I]  init sec success
-2018/11/25 12:58:04.415 [I]  initSecProductWatcher begin
-2018/11/25 12:58:04.416 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc42001c780 1082:0xc42001c750] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc420229500 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 12:58:04.421 [I]  initSec succ
-2018/11/25 12:58:04.421 [D]  begin function watchSecProductKey
-2018/11/25 12:58:08.761 [D]  client request:[&{1082     0 2018-11-25 12:58:08.761584616 +0800 CST m=+4.370562204  127.0.0.1  {0 0 0 }}]
-2018/11/25 12:58:09.445 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T12:58:08.761584616+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
-2018/11/25 13:01:15.333 [I]  init logger success
-2018/11/25 13:01:15.333 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 13:01:15.333 [I]  init etcd success
-2018/11/25 13:01:15.333 [I]  init redis success
-2018/11/25 13:01:15.337 [I]  init sec success
-2018/11/25 13:01:15.337 [I]  initSecProductWatcher begin
-2018/11/25 13:01:15.339 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc4202c2510 1082:0xc4202c24e0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4202c65b0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 13:01:15.340 [I]  initSec succ
-2018/11/25 13:01:15.342 [D]  begin function watchSecProductKey
-2018/11/25 13:01:17.686 [D]  client request:[&{1082     0 2018-11-25 13:01:17.686034721 +0800 CST m=+2.365192266  127.0.0.1  {0 0 0 }}]
-2018/11/25 13:01:18.348 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T13:01:17.686034721+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
-2018/11/25 13:06:03.625 [I]  init logger success
-2018/11/25 13:06:03.625 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 13:06:03.625 [I]  init etcd success
-2018/11/25 13:06:03.625 [I]  init redis success
-2018/11/25 13:06:03.628 [I]  init sec success
-2018/11/25 13:06:03.628 [I]  initSecProductWatcher begin
-2018/11/25 13:06:03.628 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc4202f4120 1082:0xc4202f40f0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4202ba2a0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 13:06:03.629 [I]  initSec succ
-2018/11/25 13:06:03.630 [D]  begin function watchSecProductKey
-2018/11/25 13:06:06.286 [D]  client request:[&{1082     0 2018-11-25 13:06:06.285486868 +0800 CST m=+2.677105794  127.0.0.1  {0 0 0 }}]
-2018/11/25 13:06:06.641 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T13:06:06.285486868+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
-2018/11/25 13:08:45.972 [I]  init logger success
-2018/11/25 13:08:45.972 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 13:08:45.972 [I]  init etcd success
-2018/11/25 13:08:45.973 [I]  init redis success
-2018/11/25 13:08:45.975 [I]  init sec success
-2018/11/25 13:08:45.975 [I]  initSecProductWatcher begin
-2018/11/25 13:08:45.976 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc42001c3c0 1082:0xc42001c390] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4202ac2a0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 13:08:45.977 [I]  initSec succ
-2018/11/25 13:08:45.979 [D]  begin function watchSecProductKey
-2018/11/25 13:08:48.075 [D]  client request:[&{1082     0 2018-11-25 13:08:48.075044454 +0800 CST m=+2.114047974  127.0.0.1  {0 0 0 }}]
-2018/11/25 13:08:48.986 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T13:08:48.075044454+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
-2018/11/25 13:09:30.831 [I]  init logger success
-2018/11/25 13:09:30.831 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 13:09:30.831 [I]  init etcd success
-2018/11/25 13:09:30.831 [I]  init redis success
-2018/11/25 13:09:30.833 [I]  init sec success
-2018/11/25 13:09:30.834 [I]  initSecProductWatcher begin
-2018/11/25 13:09:30.835 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1082:0xc420326090 1092:0xc4203260c0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 1 50 [localhost baidu.com] map[] map[] 0xc4202f8150 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
-2018/11/25 13:09:30.836 [I]  initSec succ
-2018/11/25 13:09:30.840 [D]  begin function watchSecProductKey
-2018/11/25 13:09:32.590 [D]  client request:[&{1082     0 2018-11-25 13:09:32.590441431 +0800 CST m=+1.770058484  127.0.0.1  {0 0 0 }}]
-2018/11/25 13:09:32.845 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T13:09:32.590441431+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","ResultChan":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
-2018/11/25 13:10:19.027 [I]  init logger success
-2018/11/25 13:10:19.027 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
-2018/11/25 13:10:19.027 [I]  init etcd success
-2018/11/25 13:10:19.028 [E]  ping redis failed, err:ERR max number of clients reached
-2018/11/25 13:10:19.028 [E]  init redis failed, err:ERR max number of clients reached
-2018/11/25 13:10:19.028 [I]  initSec succ
+2018/11/25 16:48:44.938 [I]  init logger success
+2018/11/25 16:48:44.938 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/25 16:48:44.938 [I]  init etcd success
+2018/11/25 16:48:44.939 [I]  init redis success
+2018/11/25 16:48:44.941 [I]  init sec success
+2018/11/25 16:48:44.941 [I]  initSecProductWatcher begin
+2018/11/25 16:48:44.942 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1082:0xc4200183c0 1092:0xc4200183f0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc42028e2a0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/25 16:48:44.943 [I]  initSec succ
+2018/11/25 16:48:44.947 [D]  begin function watchSecProductKey
+2018/11/25 16:48:46.917 [I]  init logger success
+2018/11/25 16:48:46.917 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/25 16:48:46.917 [I]  init etcd success
+2018/11/25 16:48:46.918 [E]  ping redis failed, err:ERR max number of clients reached
+2018/11/25 16:48:46.918 [E]  init redis failed, err:ERR max number of clients reached
+2018/11/25 16:48:46.918 [I]  initSec succ
+2018/11/25 16:48:48.687 [I]  init logger success
+2018/11/25 16:48:48.687 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/25 16:48:48.687 [I]  init etcd success
+2018/11/25 16:48:48.689 [I]  init redis success
+2018/11/25 16:48:48.690 [I]  init sec success
+2018/11/25 16:48:48.690 [I]  initSecProductWatcher begin
+2018/11/25 16:48:48.691 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc4202ae150 1082:0xc4202ae120] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc4202b6230 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/25 16:48:48.692 [I]  initSec succ
+2018/11/25 16:48:48.695 [D]  begin function watchSecProductKey
+2018/11/25 16:48:50.876 [D]  client request:[&{1082     0 2018-11-25 16:48:50.876559973 +0800 CST m=+2.200305734  127.0.0.1  {0 0 0 }}]
+2018/11/25 16:48:51.697 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T16:48:50.876559973+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","BasicInfo":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
+2018/11/25 16:58:42.665 [I]  init logger success
+2018/11/25 16:58:42.665 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/25 16:58:42.665 [I]  init etcd success
+2018/11/25 16:58:42.670 [I]  init redis success
+2018/11/25 16:58:42.673 [I]  init sec success
+2018/11/25 16:58:42.673 [I]  initSecProductWatcher begin
+2018/11/25 16:58:42.673 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1082:0xc4200824e0 1092:0xc420082510] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc42014f570 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/25 16:58:42.674 [I]  initSec succ
+2018/11/25 16:58:42.675 [D]  begin function watchSecProductKey
+2018/11/25 16:59:00.880 [D]  client request:[&{1082     0 2018-11-25 16:59:00.880825908 +0800 CST m=+18.229470980  127.0.0.1  {0 0 0 }}]
+2018/11/25 16:59:01.700 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T16:59:00.880825908+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","BasicInfo":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
+2018/11/25 16:59:08.552 [D]  client request:[&{1082     0 2018-11-25 16:59:08.55291408 +0800 CST m=+25.901559158  127.0.0.1  {0 0 0 }}]
+2018/11/25 16:59:08.715 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T16:59:08.55291408+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","BasicInfo":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
+2018/11/25 17:16:29.839 [I]  init logger success
+2018/11/25 17:16:29.839 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/25 17:16:29.839 [I]  init etcd success
+2018/11/25 17:16:29.842 [I]  init redis success
+2018/11/25 17:16:29.843 [I]  init sec success
+2018/11/25 17:16:29.843 [I]  initSecProductWatcher begin
+2018/11/25 17:16:29.844 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc420018690 1082:0xc420018660] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc42013b570 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/25 17:16:29.849 [I]  initSec succ
+2018/11/25 17:16:29.850 [D]  begin function watchSecProductKey
+2018/11/25 17:16:33.044 [D]  client request:[&{1082     0 2018-11-25 17:16:33.044539371 +0800 CST m=+3.218819100  127.0.0.1  {0 0 0 }}]
+2018/11/25 17:16:33.861 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T17:16:33.044539371+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","BasicInfo":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
+2018/11/25 17:16:55.066 [I]  init logger success
+2018/11/25 17:16:55.066 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/25 17:16:55.066 [I]  init etcd success
+2018/11/25 17:16:55.067 [I]  init redis success
+2018/11/25 17:16:55.073 [I]  init sec success
+2018/11/25 17:16:55.073 [I]  initSecProductWatcher begin
+2018/11/25 17:16:55.074 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc4202ca510 1082:0xc4202ca4e0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc42029e620 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/25 17:16:55.075 [I]  initSec succ
+2018/11/25 17:16:55.077 [D]  begin function watchSecProductKey
+2018/11/25 17:16:58.207 [D]  client request:[&{1082     0 2018-11-25 17:16:58.207008132 +0800 CST m=+3.149427425  127.0.0.1  {0 0 0 }}]
+2018/11/25 17:16:59.082 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T17:16:58.207008132+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","BasicInfo":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
+2018/11/25 17:18:49.938 [I]  init logger success
+2018/11/25 17:18:49.938 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/25 17:18:49.938 [I]  init etcd success
+2018/11/25 17:18:49.939 [I]  init redis success
+2018/11/25 17:18:49.941 [I]  init sec success
+2018/11/25 17:18:49.941 [I]  initSecProductWatcher begin
+2018/11/25 17:18:49.942 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1082:0xc42023a6c0 1092:0xc42023a6f0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc420276690 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/25 17:18:49.943 [I]  initSec succ
+2018/11/25 17:18:49.946 [D]  begin function watchSecProductKey
+2018/11/25 17:18:51.442 [D]  client request:[&{1082     0 2018-11-25 17:18:51.442453315 +0800 CST m=+1.512758388  127.0.0.1  {0 0 0 }}]
+2018/11/25 17:18:51.964 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T17:18:51.442453315+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","BasicInfo":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
+2018/11/25 17:19:11.689 [I]  init logger success
+2018/11/25 17:19:11.689 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/25 17:19:11.689 [I]  init etcd success
+2018/11/25 17:19:11.690 [I]  init redis success
+2018/11/25 17:19:11.692 [I]  init sec success
+2018/11/25 17:19:11.692 [I]  initSecProductWatcher begin
+2018/11/25 17:19:11.693 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc420018570 1082:0xc420018540] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc42013b490 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/25 17:19:11.694 [I]  initSec succ
+2018/11/25 17:19:11.703 [D]  begin function watchSecProductKey
+2018/11/25 17:19:13.740 [D]  client request:[&{1082     0 2018-11-25 17:19:13.739927759 +0800 CST m=+2.062318385  127.0.0.1  {0 0 0 }}]
+2018/11/25 17:19:14.715 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T17:19:13.739927759+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","BasicInfo":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
+2018/11/25 17:19:16.218 [D]  client request:[&{1082     0 2018-11-25 17:19:16.218482689 +0800 CST m=+4.540873302  127.0.0.1  {0 0 0 }}]
+2018/11/25 17:19:16.719 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T17:19:16.218482689+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","BasicInfo":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
+2018/11/25 17:22:58.053 [I]  init logger success
+2018/11/25 17:22:58.053 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/25 17:22:58.053 [I]  init etcd success
+2018/11/25 17:22:58.056 [I]  init redis success
+2018/11/25 17:22:58.058 [I]  init sec success
+2018/11/25 17:22:58.058 [I]  initSecProductWatcher begin
+2018/11/25 17:22:58.059 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc420082960 1082:0xc420082930] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc4201519d0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/25 17:22:58.064 [I]  initSec succ
+2018/11/25 17:22:58.064 [D]  begin function watchSecProductKey
+2018/11/25 17:22:59.333 [D]  client request:[&{1082     0 2018-11-25 17:22:59.333745671 +0800 CST m=+1.291224760  127.0.0.1  {0 0 0 }}]
+2018/11/25 17:23:00.070 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T17:22:59.333745671+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","BasicInfo":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
+2018/11/25 17:23:52.715 [I]  init logger success
+2018/11/25 17:23:52.715 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/25 17:23:52.715 [I]  init etcd success
+2018/11/25 17:23:52.716 [I]  init redis success
+2018/11/25 17:23:52.719 [I]  init sec success
+2018/11/25 17:23:52.719 [I]  initSecProductWatcher begin
+2018/11/25 17:23:52.720 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1082:0xc42033c090 1092:0xc42033c0c0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc420306150 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/25 17:23:52.720 [I]  initSec succ
+2018/11/25 17:23:52.722 [D]  begin function watchSecProductKey
+2018/11/25 17:23:54.882 [D]  client request:[&{1082     0 2018-11-25 17:23:54.881920608 +0800 CST m=+2.176161501  127.0.0.1  {0 0 0 }}]
+2018/11/25 17:23:55.725 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T17:23:54.881920608+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","BasicInfo":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
+2018/11/25 17:28:53.319 [I]  init logger success
+2018/11/25 17:28:53.319 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/25 17:28:53.319 [I]  init etcd success
+2018/11/25 17:28:53.320 [I]  init redis success
+2018/11/25 17:28:53.323 [I]  init sec success
+2018/11/25 17:28:53.323 [I]  initSecProductWatcher begin
+2018/11/25 17:28:53.325 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc420018660 1082:0xc420018630] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc42013b570 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/25 17:28:53.326 [I]  initSec succ
+2018/11/25 17:28:53.329 [D]  begin function watchSecProductKey
+2018/11/25 17:28:54.599 [D]  client request:[&{1082     0 2018-11-25 17:28:54.599164327 +0800 CST m=+1.288312052  127.0.0.1  {0 0 0 }}]
+2018/11/25 17:28:55.331 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T17:28:54.599164327+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","BasicInfo":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
+2018/11/25 17:29:41.012 [I]  init logger success
+2018/11/25 17:29:41.012 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/25 17:29:41.012 [I]  init etcd success
+2018/11/25 17:29:41.016 [I]  init redis success
+2018/11/25 17:29:41.018 [I]  init sec success
+2018/11/25 17:29:41.018 [I]  initSecProductWatcher begin
+2018/11/25 17:29:41.019 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1092:0xc420018390 1082:0xc420018360] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc42028c1c0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/25 17:29:41.022 [I]  initSec succ
+2018/11/25 17:29:41.025 [D]  begin function watchSecProductKey
+2018/11/25 17:29:44.221 [D]  client request:[&{1082     0 2018-11-25 17:29:44.221540074 +0800 CST m=+3.227318520  127.0.0.1  {0 0 0 }}]
+2018/11/25 17:29:45.028 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T17:29:44.221540074+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","BasicInfo":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
+2018/11/25 17:32:08.979 [I]  init logger success
+2018/11/25 17:32:08.979 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/25 17:32:08.979 [I]  init etcd success
+2018/11/25 17:32:08.979 [I]  init redis success
+2018/11/25 17:32:08.985 [I]  init sec success
+2018/11/25 17:32:08.985 [I]  initSecProductWatcher begin
+2018/11/25 17:32:08.985 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1082:0xc420018570 1092:0xc4200185a0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc420139490 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/25 17:32:08.986 [I]  initSec succ
+2018/11/25 17:32:08.988 [D]  begin function watchSecProductKey
+2018/11/25 17:32:11.215 [D]  client request:[&{1082     0 2018-11-25 17:32:11.215041433 +0800 CST m=+2.245475566  127.0.0.1  {0 0 0 }}]
+2018/11/25 17:32:11.991 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T17:32:11.215041433+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","BasicInfo":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}
+2018/11/25 17:32:46.579 [I]  init logger success
+2018/11/25 17:32:46.579 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/25 17:32:46.579 [I]  init etcd success
+2018/11/25 17:32:46.580 [I]  init redis success
+2018/11/25 17:32:46.581 [I]  init sec success
+2018/11/25 17:32:46.581 [I]  initSecProductWatcher begin
+2018/11/25 17:32:46.582 [D]  init service succ, config:&{{127.0.0.1:6379 64 0 300} {127.0.0.1:6379 64 0 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1082:0xc420018420 1092:0xc420018450] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc4202762a0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/25 17:32:46.594 [I]  initSec succ
+2018/11/25 17:32:46.598 [D]  begin function watchSecProductKey
+2018/11/25 17:32:48.389 [D]  client request:[&{1082     0 2018-11-25 17:32:48.388733651 +0800 CST m=+1.821179877  127.0.0.1  {0 0 0 }}]
+2018/11/25 17:32:48.597 [D]  rpop from redis succ, data:{"ProductId":1082,"Source":"","AuthCode":"","SecTime":"","Nance":"","UserId":0,"AccessTime":"2018-11-25T17:32:48.388733651+08:00","UserAuthSign":"","ClientAddr":"127.0.0.1","ClientReference":"","BasicInfo":{"ProductId":1082,"UserId":0,"Code":0,"Token":"Temporary token"}}

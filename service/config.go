@@ -81,8 +81,8 @@ type SecRequst struct {
 	ClientReference string
 
 	//CloseNotify chan bool
-	//ResultChan chan *SecResult
-	ResultChan SecResult
+	//BasicInfo chan *SecResult
+	BasicInfo SecResult
 
 }
 

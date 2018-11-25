@@ -48,6 +48,7 @@ func initSec(err error) {
 		logs.Info("init redis success")
 	}
 
+	//get all product info
 	err = loadSecConf()
 	if err != nil {
 		logs.Error("init sec conf failed, err:%v", err)

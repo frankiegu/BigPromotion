@@ -18,6 +18,8 @@ const (
 
 var (
 	secKillConf *SecKillConf
+	businessResponse chan *SecResponse
+
 )
 
 
@@ -57,7 +59,7 @@ func InitService(serviceConf *SecKillConf)(err error) {
 func NewSecRequst()(secRequst *SecRequst) {
 	//create an object
 	secRequst = &SecRequst{
-		//ResultChan : make(chan *SecResult, 1),
+		//BasicInfo : make(chan *SecResult, 1),
 	}
 
 	return
@@ -218,11 +220,11 @@ func SecKill(req *SecRequst)(data map[string]interface{}, code int, err error) {
 
 	userKey := fmt.Sprintf("%s_%s", req.UserId, req.ProductId)
 
-	req.ResultChan.ProductId = req.ProductId
-	req.ResultChan.UserId = req.UserId
-	req.ResultChan.Token = "Temporary token"
+	req.BasicInfo.ProductId = req.ProductId
+	req.BasicInfo.UserId = req.UserId
+	req.BasicInfo.Token = "Temporary token"
 
-	secKillConf.UserConnMap[userKey] = req.ResultChan
+	secKillConf.UserConnMap[userKey] = req.BasicInfo
 	println("secKillConf.UserConnMap put data")
 	for k, v := range secKillConf.UserConnMap {
 		println("k: ", k)
@@ -232,6 +234,7 @@ func SecKill(req *SecRequst)(data map[string]interface{}, code int, err error) {
 		println("code: ", v.Code)
 		println("token: ", v.Token)
 	}
+
 	//write to redis
 	secKillConf.secReqChan <- req
 
@@ -246,30 +249,54 @@ func SecKill(req *SecRequst)(data map[string]interface{}, code int, err error) {
 		//secKillConf.UserConnMapLock.Unlock()
 	}()
 
-	result := req.ResultChan
+	result := req.BasicInfo
 	code = result.Code
 	data["product_id"] = result.ProductId
 	data["token"] = result.Token
 	data["user_id"] = result.UserId
-	println(req.ResultChan.Token)
+	println(req.BasicInfo.Token)
+	//return
+	businessResponse = make(chan *SecResponse, 1000)
+	// here just sumulate
+
+	testBuz := <- businessResponse
+	println("testBz")
+	println("testBuz.TokenTime: ", testBuz.TokenTime)
+	println("testBuz.Token: ", testBuz.Token)
+	println("testBuz.UserId: ", testBuz.UserId)
+	println("testBuz.ProductId: ", testBuz.ProductId)
+
+	//code = result.Code
+	data["b_product_id"] = testBuz.ProductId
+	data["b_token"] = testBuz.Token
+	data["b_user_id"] = testBuz.UserId
+	data["b_token_time"] = testBuz.TokenTime
+	data["b_user_id"] = testBuz.UserId
+
+	defer func() {
+		close(businessResponse)
+	}()
 	return
+
 
 	select {
 
-		case <- ticker.C:
-			code = ErrProcessTimeout
-			err = fmt.Errorf("request timeout")
-			return
+		//case <- ticker.C:
+		//	code = ErrProcessTimeout
+		//	err = fmt.Errorf("request timeout")
+		//	return
+
 		//case <- req.CloseNotify:
 		//	code = ErrClientClosed
 		//	err = fmt.Errorf("client already closed")
 		//	return
-		//case result := <-req.ResultChan:
+		//case result := <- businessResponse:
 		//	println("wocao........")
-		//	code = result.Code
-		//	data["product_id"] = result.ProductId
-		//	data["token"] = result.Token
-		//	data["user_id"] = result.UserId
+		//	//code = result.Code
+		//	data["b_product_id"] = result.ProductId
+		//	data["b_token"] = result.Token
+		//	data["b_user_id"] = result.UserId
+		//
 		//	return
 
 	}
