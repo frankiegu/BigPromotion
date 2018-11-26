@@ -10,4 +10,5 @@ const (
 	ErrActiveSaleOut = 1007
 	ErrProcessTimeout = 1008
 	ErrClientClosed = 1009
+	ErrUserNull = 1010
 )

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"github.com/astaxie/beego"
 	"github.com/beego/logs"
-	"strings"
 	"myproject/service"
+	"strings"
 )
 
 
@@ -13,6 +13,10 @@ import (
 var(
 	secKillConf = &service.SecKillConf{
 		SecProductInfoMap:make(map[int]*service.SecProductInfoConf, 1024),
+	}
+
+	codisConfig = &service.CodisConf{
+
 	}
 )
 
@@ -151,6 +155,8 @@ func initConfig(err error) {
 		return
 	}
 	secKillConf.ReadProxy2LayerGoroutineNums = ReadGoNums
+
+
 
 
 

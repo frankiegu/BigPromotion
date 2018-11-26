@@ -22,6 +22,10 @@ type EtcdConf struct {
 
 }
 
+type CodisConf struct {
+	TestMode bool
+}
+
 
 type SecKillConf struct {
 	RedisBlackConf RedisConf
