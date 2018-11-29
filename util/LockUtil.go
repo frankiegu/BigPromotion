@@ -106,10 +106,10 @@ func TryLockWithTimeout(conn redis.Conn, resource string, token string, timeout 
 }
 
 type Function interface {
-	Execute(conn redis.Conn, redisKey string, uin int64)(m interface{} ,err error)
+	Execute(conn redis.Conn, redisKey string, v... interface{})(m interface{} ,err error)
 }
 
-func (lock *Lock) DoWithLock(lockKey string, expire int, conn redis.Conn, function Function, redisKey string, uin int64) (m interface{}, err error) {
+func (lock *Lock) DoWithLock(lockKey string, expire int, conn redis.Conn, function Function, redisKey string, v... interface{}) (m interface{}, err error) {
 
 	requestId := uuid.Must(uuid.NewV4())
 	lock, err = TryLock(conn, lockKey, fmt.Sprintf("%d", requestId), int(1))
@@ -122,7 +122,7 @@ func (lock *Lock) DoWithLock(lockKey string, expire int, conn redis.Conn, functi
 
 	fmt.Println("Distribute lock key: ", lockKey)
 	fmt.Println("Business key: ", redisKey)
-	res, err := function.Execute(conn, redisKey, uin)
+	res, err := function.Execute(conn, redisKey, v)
 	fmt.Println("res: ", res)
 
 

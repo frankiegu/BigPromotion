@@ -11,33 +11,80 @@ import (
 type HomePageService struct {
 
 }
+var(
+	codisUtil = util.GetCodisUtilInstance()
+	DefaultTimeout = 1
+
+)
 
 func (h *HomePageService) AddUser(uin int64, uinPublicDayDistributeLock string) {
 	fmt.Println("uinPublicDayDistributeLock: ", uinPublicDayDistributeLock)
 	fmt.Println("uin: ", uin)
 
-	codisUtil := util.GetCodisUtilInstance()
+	//codisUtil := util.GetCodisUtilInstance()
 	redisKey := codisUtil.GetCodisKey(util.USER_DETAILS)
 	fmt.Println("redisKey: ", redisKey)
 
 	lock := &util.Lock{}
-	conn, err := redis.Dial("tcp", "localhost:6379")
+	conn, err := getRedisConn()
 	defer conn.Close()
 
-	DefaultTimeout := 1
 	res, err := lock.DoWithLock(uinPublicDayDistributeLock, DefaultTimeout, conn, AddUserFunc{}, redisKey, uin)
 	fmt.Println("AddUser lock.DoWithLock res: ", res)
 	fmt.Println("AddUser lock.DoWithLock err: ", err)
 
 }
 
+func getRedisConn() (redis.Conn, interface{}) {
+	return redis.Dial("tcp", "localhost:6379")
+}
+
+func (h *HomePageService) GetAllRaiseNums(uinPublicDayDistributeLock string) interface{} {
+
+	//codisUtil := util.GetCodisUtilInstance()
+	redisKey := codisUtil.GetCodisKey(util.GLOBAL_DONATE_DETAILS)
+	lock := &util.Lock{}
+	conn, err := getRedisConn()
+	defer conn.Close()
+
+	res, err := lock.DoWithLock(uinPublicDayDistributeLock, DefaultTimeout, conn, GetAllRaiseNumsFunc{}, redisKey)
+	if err != nil {
+		res = nil
+		fmt.Println("err: ", err)
+	}
+	return res
+}
+
+type GetAllRaiseNumsFunc struct {
+
+}
+
+func (getAllRaiseNums GetAllRaiseNumsFunc) Execute (conn redis.Conn, redisKey string, v... interface{}) (m interface{}, err error) {
+
+	allRaiseNumStr, err := redis.String(conn.Do("get", redisKey))
+	if allRaiseNumStr == "" {
+		fmt.Println("allRaiseNumStr is null, init with 0 now ...")
+		conn.Do("set", redisKey, "0")
+		allRaiseNumStr, err = redis.String(conn.Do("get", redisKey))
+	}
+	fmt.Println("allRaiseNumStr: ", allRaiseNumStr)
+	if err != nil {
+		return "0", err
+	}
+	return allRaiseNumStr, nil
+}
+
+
 type AddUserFunc struct {
 
 }
 
-func (addUser AddUserFunc) Execute (conn redis.Conn, redisKey string, uin int64)(m interface{}, err error) {
+func (addUser AddUserFunc) Execute (conn redis.Conn, redisKey string, v... interface{})(m interface{}, err error) {
 
-	uinStr := string(uin)
+
+	uinStr := getUinStr(v)
+	fmt.Println("uinStr:", uinStr)
+
 	userDetail, err := redis.String(conn.Do("hget", redisKey, uinStr))
 
 	if userDetail == "" {
@@ -75,4 +122,12 @@ func (addUser AddUserFunc) Execute (conn redis.Conn, redisKey string, uin int64)
 	printUserDetail := userDetail
 	fmt.Println("userDetail that already inserted is : ", printUserDetail)
 	return userDetail, nil
+}
+func getUinStr(v []interface{}) string {
+	uin := v[0]
+	juin, _ := json.Marshal(uin)
+	uinStr := string(juin)
+	uinStrLen := len(uinStr)
+	uinStr = uinStr[1:uinStrLen-1]
+	return uinStr
 }

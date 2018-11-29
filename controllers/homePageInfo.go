@@ -40,6 +40,10 @@ func (p *GetHomePageInfoController) GetHomePageInfo() {
 		homepageService.AddUser(uid, uinPublicDayDistributeLock)
 	}
 
+	allRaiseCourseTimeNums := homepageService.GetAllRaiseNums(uinPublicDayDistributeLock)
+	fmt.Println("allRaiseCourseTimeNums: ", allRaiseCourseTimeNums)
+
+	//apollo
 
 
 
