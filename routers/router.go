@@ -14,5 +14,6 @@ func init() {
     beego.Router("/secKill", &controllers.SkillController{}, "*:SecKill")
     beego.Router("/secInfo", &controllers.SkillController{}, "*:SecInfo")
     beego.Router("/getHomePageInfo", &controllers.GetHomePageInfoController{}, "*:GetHomePageInfo")
+    beego.Router("/getLoveNums", &controllers.GetLoveNumsController{}, "*:GetLoveNums")
 
 }

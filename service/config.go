@@ -19,6 +19,7 @@ type EtcdConf struct {
 	//etcdSecKey string
 	EtcdSecKeyPrefix string
 	EtcdSecProductKey string
+	EtcdAddCourseKey string
 
 }
 

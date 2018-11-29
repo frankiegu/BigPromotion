@@ -6,7 +6,16 @@ import (
 	"github.com/garyburd/redigo/redis"
 	"myproject/bean"
 	"myproject/util"
+	"strconv"
+	"time"
+	etcd_client "github.com/coreos/etcd/client"
+	"context"
+
 )
+
+type AddCourseNums struct {
+	AddNums int64
+}
 
 type HomePageService struct {
 
@@ -54,6 +63,47 @@ func (h *HomePageService) GetAllRaiseNums(uinPublicDayDistributeLock string) int
 	}
 	return res
 }
+func (h *HomePageService) GetConfigAllDonateCourseNums() string {
+
+	kapi := getKapi()
+	addCourseKey := secKillConf.EtcdConf.EtcdAddCourseKey
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+	respGet, err := kapi.Get(ctx, addCourseKey, nil)
+
+	cancel()
+
+	if err != nil {
+		fmt.Println("get failed err, ", err)
+		return "0"
+	}
+
+	fmt.Println("get operation : key: ", respGet.Node.Key, ", value: ", respGet.Node.Value)
+	respStr := respGet.Node.Value
+	addCourseNumsStruct := &AddCourseNums{}
+	json.Unmarshal([]byte(respStr), &addCourseNumsStruct)
+	configNums := addCourseNumsStruct.AddNums
+	fmt.Println("configNums: ", configNums)
+	configNUmsStr := strconv.FormatInt(configNums, 10)
+	return configNUmsStr
+
+}
+
+func getKapi() etcd_client.KeysAPI {
+	cli, err := etcd_client.New(etcd_client.Config{
+		Endpoints : []string{secKillConf.EtcdConf.EtcdAddr},
+		HeaderTimeoutPerRequest : time.Duration(secKillConf.EtcdConf.Timeout) * time.Second,
+	})
+
+	if err != nil {
+		fmt.Println("connect etcd failed, err", err)
+		return nil
+	}
+
+	kapi := etcd_client.NewKeysAPI(cli)
+	return kapi
+}
+
+
 
 type GetAllRaiseNumsFunc struct {
 

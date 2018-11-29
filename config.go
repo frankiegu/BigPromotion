@@ -77,6 +77,9 @@ func initConfig(err error) {
 		return
 	}
 
+	addCourseNum := beego.AppConfig.String("etcd_add_course_key")
+	secKillConf.EtcdConf.EtcdAddCourseKey = addCourseNum
+
 	productKey := beego.AppConfig.String("etcd_product_key")
 	if len(secKillConf.EtcdConf.EtcdSecProductKey) == 0 {
 		err = fmt.Errorf("init config failed, read etcd_product_key error:%v", err)
@@ -85,6 +88,7 @@ func initConfig(err error) {
 	if strings.HasSuffix(secKillConf.EtcdConf.EtcdSecKeyPrefix, "/") == false {
 		secKillConf.EtcdConf.EtcdSecKeyPrefix = secKillConf.EtcdConf.EtcdSecKeyPrefix + "/"
 	}
+
 
 	secKillConf.EtcdConf.EtcdSecProductKey = fmt.Sprintf("%s%s", secKillConf.EtcdConf.EtcdSecKeyPrefix, productKey)
 

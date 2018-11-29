@@ -520,3 +520,66 @@
 2018/11/29 16:14:14.032 [D]  init service succ, config:&{{127.0.0.1:6379 64 10 300} {127.0.0.1:6379 64 10 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product} ./logs/sec.log debug map[1082:0xc420220150 1092:0xc420220180] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc4202a22a0 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
 2018/11/29 16:14:14.033 [I]  initSec succ
 2018/11/29 16:14:14.034 [D]  begin function watchSecProductKey
+2018/11/29 22:47:35.489 [I]  init logger success
+2018/11/29 22:47:35.489 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/29 22:47:35.489 [I]  init etcd success
+2018/11/29 22:47:35.490 [I]  init redis success
+2018/11/29 22:47:35.491 [I]  init sec success
+2018/11/29 22:47:35.491 [I]  initSecProductWatcher begin
+2018/11/29 22:47:35.493 [D]  init service succ, config:&{{127.0.0.1:6379 64 10 300} {127.0.0.1:6379 64 10 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product /z/addNums} ./logs/sec.log debug map[1082:0xc4201880c0 1092:0xc4201880f0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc4202f2150 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/29 22:47:35.494 [I]  initSec succ
+2018/11/29 22:47:35.495 [D]  begin function watchSecProductKey
+2018/11/29 22:53:21.114 [I]  init logger success
+2018/11/29 22:53:21.114 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/29 22:53:21.114 [I]  init etcd success
+2018/11/29 22:53:21.115 [I]  init redis success
+2018/11/29 22:53:21.117 [I]  init sec success
+2018/11/29 22:53:21.117 [I]  initSecProductWatcher begin
+2018/11/29 22:53:21.117 [D]  init service succ, config:&{{127.0.0.1:6379 64 10 300} {127.0.0.1:6379 64 10 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product /z/addNums} ./logs/sec.log debug map[1082:0xc4202c2540 1092:0xc4202c2570] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc420294690 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/29 22:53:21.133 [I]  initSec succ
+2018/11/29 22:53:21.150 [D]  begin function watchSecProductKey
+2018/11/29 22:54:05.874 [I]  init logger success
+2018/11/29 22:54:05.874 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/29 22:54:05.874 [I]  init etcd success
+2018/11/29 22:54:05.875 [I]  init redis success
+2018/11/29 22:54:05.877 [I]  init sec success
+2018/11/29 22:54:05.877 [I]  initSecProductWatcher begin
+2018/11/29 22:54:05.878 [D]  init service succ, config:&{{127.0.0.1:6379 64 10 300} {127.0.0.1:6379 64 10 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product /z/addNums} ./logs/sec.log debug map[1082:0xc42001c6c0 1092:0xc42001c6f0] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc4202c6700 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/29 22:54:05.879 [I]  initSec succ
+2018/11/29 22:54:05.880 [D]  begin function watchSecProductKey
+2018/11/29 22:55:15.616 [I]  init logger success
+2018/11/29 22:55:15.616 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/29 22:55:15.616 [I]  init etcd success
+2018/11/29 22:55:15.617 [I]  init redis success
+2018/11/29 22:55:15.619 [I]  init sec success
+2018/11/29 22:55:15.619 [I]  initSecProductWatcher begin
+2018/11/29 22:55:15.620 [D]  init service succ, config:&{{127.0.0.1:6379 64 10 300} {127.0.0.1:6379 64 10 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product /z/addNums} ./logs/sec.log debug map[1082:0xc42029c5d0 1092:0xc42029c600] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc42026e770 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/29 22:55:15.631 [I]  initSec succ
+2018/11/29 22:55:15.634 [D]  begin function watchSecProductKey
+2018/11/29 22:57:02.481 [I]  init logger success
+2018/11/29 22:57:02.481 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/29 22:57:02.481 [I]  init etcd success
+2018/11/29 22:57:02.482 [I]  init redis success
+2018/11/29 22:57:02.484 [I]  init sec success
+2018/11/29 22:57:02.484 [I]  initSecProductWatcher begin
+2018/11/29 22:57:02.485 [D]  init service succ, config:&{{127.0.0.1:6379 64 10 300} {127.0.0.1:6379 64 10 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product /z/addNums} ./logs/sec.log debug map[1082:0xc4202a4540 1092:0xc4202a4570] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc4202a8620 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/29 22:57:02.487 [I]  initSec succ
+2018/11/29 22:57:02.488 [D]  begin function watchSecProductKey
+2018/11/29 22:59:41.902 [I]  init logger success
+2018/11/29 22:59:41.902 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/29 22:59:41.902 [I]  init etcd success
+2018/11/29 22:59:41.903 [I]  init redis success
+2018/11/29 22:59:41.906 [I]  init sec success
+2018/11/29 22:59:41.906 [I]  initSecProductWatcher begin
+2018/11/29 22:59:41.907 [D]  init service succ, config:&{{127.0.0.1:6379 64 10 300} {127.0.0.1:6379 64 10 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product /z/addNums} ./logs/sec.log debug map[1092:0xc42001c240 1082:0xc42001c210] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc4202e4230 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/29 22:59:41.909 [I]  initSec succ
+2018/11/29 22:59:41.909 [D]  begin function watchSecProductKey
+2018/11/29 23:12:18.997 [I]  init logger success
+2018/11/29 23:12:18.997 [I]  secKillConf.etcdConf.etcdAddr : http://127.0.0.1:2379
+2018/11/29 23:12:18.997 [I]  init etcd success
+2018/11/29 23:12:18.997 [I]  init redis success
+2018/11/29 23:12:18.999 [I]  init sec success
+2018/11/29 23:12:18.999 [I]  initSecProductWatcher begin
+2018/11/29 23:12:19.000 [D]  init service succ, config:&{{127.0.0.1:6379 64 10 300} {127.0.0.1:6379 64 10 300} {http://127.0.0.1:2379 5 /z/secskill/ /z/secskill/product /z/addNums} ./logs/sec.log debug map[1092:0xc4203300c0 1082:0xc420330090] {{0 0} 0 0 0 0} kcHsJ3GE9SGiCmN5gQBLG8fPRMMC9jt1 5 50 [localhost baidu.com] map[] map[] 0xc42030c150 <nil> {{0 0} 0 0 0 0} 16 16 <nil> 0 map[] {0 0}}
+2018/11/29 23:12:19.001 [I]  initSec succ
+2018/11/29 23:12:19.001 [D]  begin function watchSecProductKey
