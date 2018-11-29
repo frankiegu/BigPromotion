@@ -37,7 +37,7 @@ type Lock struct {
 }
 
 func (lock *Lock) tryLock()(err error) {
-	lockReply, err := lock.conn.Do("SET", lock.resource, lock.token, SET_WITH_EX, int(lock.timeout), SET_IF_NOT_EXIST)
+	lockReply, err := lock.conn.Do("SET", lock.resource, lock.token, SET_WITH_EX, lock.timeout, SET_IF_NOT_EXIST)
 	if err != nil {
 		return errors.New("redis fail")
 	}
@@ -52,8 +52,12 @@ func (lock *Lock) tryLock()(err error) {
 
 func (lock *Lock) Unlock() (err error) {
 
-	delScript.Do(lock.conn, lock.resource, lock.token)
-	//_, err = lock.conn.Do("del", lock.key())
+	_, err = delScript.Do(lock.conn, lock.resource, lock.token)
+	if err != nil {
+		fmt.Println("unlock failed")
+		fmt.Println("unlock err: ", err)
+	}
+	//_, err = lock.conn.Do("del", lock.resource)
 	return
 }
 
@@ -95,28 +99,31 @@ func TryLockWithTimeout(conn redis.Conn, resource string, token string, timeout 
 	err = lock.tryLock()
 	if err != nil {
 		lock = nil
+		fmt.Println("try lock failed")
+		fmt.Println("err: ", err)
 	}
 	return
 }
 
 type Function interface {
-	Execute(conn redis.Conn)(m interface{} ,err error)
+	Execute(conn redis.Conn, redisKey string, uin int64)(m interface{} ,err error)
 }
 
-func (lock *Lock) DoWithLock(lockKey string, expire int, conn redis.Conn, function Function) (m interface{}, err error) {
+func (lock *Lock) DoWithLock(lockKey string, expire int, conn redis.Conn, function Function, redisKey string, uin int64) (m interface{}, err error) {
 
 	requestId := uuid.Must(uuid.NewV4())
 	lock, err = TryLock(conn, lockKey, fmt.Sprintf("%d", requestId), int(1))
 	defer lock.Unlock()
-
-	res, err := function.Execute(conn)
-
 	if err != nil {
 		log.Fatal("Error while getting lock")
 		m = nil
 		return
 	}
 
+	fmt.Println("Distribute lock key: ", lockKey)
+	fmt.Println("Business key: ", redisKey)
+	res, err := function.Execute(conn, redisKey, uin)
+	fmt.Println("res: ", res)
 
 
 	m = res

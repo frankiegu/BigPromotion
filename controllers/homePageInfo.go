@@ -37,10 +37,9 @@ func (p *GetHomePageInfoController) GetHomePageInfo() {
 
 	homepageService := &service.HomePageService{}
 	if uid != 0 {
-
 		homepageService.AddUser(uid, uinPublicDayDistributeLock)
-		//addUser(uid, uinPublicDayDistributeLock)
 	}
+
 
 
 

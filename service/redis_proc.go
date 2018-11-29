@@ -51,8 +51,6 @@ func ReadHandle() {
 			continue
 		}
 
-		logs.Debug("rpop from redis succ, data:%s", string(data))
-
 		if err != nil {
 			//logs.Error("RPOP failed, error:%v", err)
 			conn.Close()
