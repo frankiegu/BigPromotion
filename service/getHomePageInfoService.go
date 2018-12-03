@@ -173,11 +173,4 @@ func (addUser AddUserFunc) Execute (conn redis.Conn, redisKey string, v... inter
 	fmt.Println("userDetail that already inserted is : ", printUserDetail)
 	return userDetail, nil
 }
-func getUinStr(v []interface{}) string {
-	uin := v[0]
-	juin, _ := json.Marshal(uin)
-	uinStr := string(juin)
-	uinStrLen := len(uinStr)
-	uinStr = uinStr[1:uinStrLen-1]
-	return uinStr
-}
+

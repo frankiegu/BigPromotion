@@ -13,7 +13,7 @@ type GetLoveNumsController struct {
 
 func (p *GetLoveNumsController) GetLoveNums() {
 
-	data := make(map[string]interface{})
+	//data := make(map[string]interface{})
 
 	uid, err := p.GetInt64("uid")
 	result := make(map[string]interface{})
